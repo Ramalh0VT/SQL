@@ -1,0 +1,9 @@
+Challenge: 
+Real estate agency > Landlord > Property > Real estate broker > Real estate agent > [...]
+
+
+The relationship beetween real estate agency and the landlord is 1:n
+
+The relationship beetween the landlord and the property is 1:n
+
+The relationship beetween property and real estate broker 
