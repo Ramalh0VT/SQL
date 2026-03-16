@@ -1,0 +1,7 @@
+CREATE TABLE employees (
+id_employee INT PRIMARY KEY AUTO_INCREMENT,
+employee_name VARCHAR(100) NOT NULL,
+position VARCHAR(100) NOT NULL DEFAULT 'Developer',
+salary NUMERIC(15,2) NOT NULL DEFAULT 2000 CHECK(salary >=2000)
+);
+
