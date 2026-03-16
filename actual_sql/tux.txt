@@ -1,0 +1,10 @@
+select current_user;
+
+
+create database db_2td;
+
+create user 'tux'@'%' identified by '123';
+
+drop user tux;
+
+grant all privileges on db_2td.* to tux;
