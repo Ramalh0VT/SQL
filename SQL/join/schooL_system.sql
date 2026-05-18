@@ -15,3 +15,10 @@ REFERENCES students(student_id),
 PRIMARY KEY(contact_id)
 )AUTO_INCREMENT = 123;
 
+INSERT  INTO students VALUES(4,'chicao', '2000-12-12');
+
+INSERT  INTO students VALUES(5,'chicao2', '2000-12-12');
+
+INSERT INTO students VALUES(3,'chicao3','2003-12-13')
+
+SELECT * FROM students;
