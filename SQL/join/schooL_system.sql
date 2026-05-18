@@ -31,3 +31,20 @@ SELECT * FROM contacts;
 
 SELECT students.student_name, contacts.email, contacts.phone FROM students
 RIGHT JOIN contacts ON students.student_id = contacts.student_id;
+
+CREATE TABLE IF NOT EXISTS subjects(
+subject_id INT AUTO_INCREMENT PRIMARY KEY,
+subject_name VARCHAR(100) NOT NULL UNIQUE,
+carga_horaria INT NOT NULL
+);
+	
+CREATE TABLE IF NOT EXISTS registration(
+student_id INT NOT NULL,
+subject_id INT NOT NULL,
+PRIMARY KEY(student_id, subject_id),
+FOREIGN KEY (student_id) REFERENCES students(student_id),
+FOREIGN KEY(subject_id) REFERENCES subjects(subject_id)
+);
+
+DESCRIBE registration;
+DROP TABLE registration;
