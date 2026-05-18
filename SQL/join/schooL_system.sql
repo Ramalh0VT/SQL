@@ -48,3 +48,15 @@ FOREIGN KEY(subject_id) REFERENCES subjects(subject_id)
 
 DESCRIBE registration;
 DROP TABLE registration;
+
+INSERT INTO subjects VALUES(default, 'Sist. Operacionais', 120);
+INSERT INTO subjects VALUES(default, 'Banco de dados', 1200);
+INSERT INTO subjects VALUES(default, 'LEvantamento de requisitos', 100);
+INSERT INTO registration (student_id, subject_id) VALUES(6,1);
+
+SELECT * FROM registration;
+
+SELECT s.student_name, ss.subject_name FROM registration AS r
+INNER JOIN students AS s ON ss.student_id = ss.subject_id
+INNER JOIN subjects AS ss ON ss.subject_id = r.subject_id;
+
