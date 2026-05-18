@@ -22,3 +22,12 @@ INSERT  INTO students VALUES(5,'chicao2', '2000-12-12');
 INSERT INTO students VALUES(3,'chicao3','2003-12-13')
 
 SELECT * FROM students;
+
+INSERT INTO contacts VALUES(123, 'chic@gmail.com', '12345678910', 4)
+
+INSERT INTO contacts VALUES(124,'pife@gmail.com', '0987654321', 4)
+
+SELECT * FROM contacts;
+
+SELECT students.student_name, contacts.email, contacts.phone FROM students
+RIGHT JOIN contacts ON students.student_id = contacts.student_id;
